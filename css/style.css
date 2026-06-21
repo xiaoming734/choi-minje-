@@ -1,11 +1,11 @@
 /* ============================================
-   崔旻帝 MINJE 百科全書 — 主樣式表
-   現代簡約風 + 像素小狗可愛元素
+   崔旻帝 MINJE 百科全书 — 主样式表
+   现代简约风 + 像素小狗可爱元素
    ============================================ */
 
-/* --- 變數與基礎設定 --- */
+/* --- 变量与基础设置 --- */
 :root {
-    /* 主色調 */
+    /* 主色调 */
     --cream: #faf8f5;
     --warm-white: #fefdfb;
     --white: #ffffff;
@@ -13,7 +13,7 @@
     --ink-light: #5c5c5c;
     --ink-lighter: #8c8c8c;
 
-    /* 點綴色 */
+    /* 点缀色 */
     --pink: #e8a0bf;
     --pink-light: #f5d5e6;
     --pink-pale: #fdf2f7;
@@ -34,7 +34,7 @@
     --px-tongue: #f0a0a0;
     --px-cheek: #f5c0b0;
 
-    /* 間距 */
+    /* 间距 */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -43,23 +43,23 @@
     --space-2xl: 5rem;
     --space-3xl: 8rem;
 
-    /* 圓角 */
+    /* 圆角 */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
     --radius-xl: 32px;
     --radius-full: 9999px;
 
-    /* 陰影 */
+    /* 阴影 */
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
     --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
     --shadow-lg: 0 8px 32px rgba(0,0,0,0.1);
 
-    /* 過渡 */
+    /* 过渡 */
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* 字體 */
+    /* 字体 */
     --font-en: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-zh: 'Noto Sans SC', sans-serif;
     --font-kr: 'Noto Sans KR', sans-serif;
@@ -98,11 +98,11 @@ a {
 }
 
 /* ==========================================
-   像素小狗 CSS Art 裝飾
-   (使用 box-shadow 像素繪製技術)
+   像素小狗 CSS Art 装饰
+   (使用 box-shadow 像素绘制技术)
    ========================================== */
 
-/* 像素小狗主體 (4x4 像素網格, 每像素 6px) */
+/* 像素小狗主体 (4x4 像素网格, 每像素 6px) */
 .pixel-puppy {
     position: absolute;
     width: 6px;
@@ -121,7 +121,7 @@ a {
     width: 6px;
     height: 6px;
     background: var(--px-body);
-    /* 用 box-shadow 繪製 8x8 像素小狗 */
+    /* 用 box-shadow 绘制 8x8 像素小狗 */
     box-shadow:
         /* row 0 - 耳朵 */
         12px -6px 0 var(--px-ear), 30px -6px 0 var(--px-ear),
@@ -175,7 +175,7 @@ a {
 .paw-2 { top: 65%; right: 15%; }
 .paw-3 { top: 45%; left: 8%; }
 
-/* 像素骨頭 */
+/* 像素骨头 */
 .pixel-bone {
     position: absolute;
     width: 6px;
@@ -204,7 +204,7 @@ a {
 .bone-2 { top: 80%; right: 12%; transform: rotate(-15deg); }
 
 /* ==========================================
-   導航欄
+   导航栏
    ========================================== */
 
 .navbar {
@@ -311,7 +311,7 @@ a {
 }
 
 /* ==========================================
-   主視覺區 (Hero)
+   主视觉区 (Hero)
    ========================================== */
 
 .hero {
@@ -445,7 +445,7 @@ a {
     50% { top: 24px; opacity: 0.3; }
 }
 
-/* 主視覺右側 */
+/* 主视觉右侧 */
 .hero-visual {
     flex: 0 0 auto;
     z-index: 2;
@@ -485,7 +485,7 @@ a {
     border-right: 3px solid var(--pink);
 }
 
-/* 主視覺照片 */
+/* 主视觉照片 */
 .hero-img {
     width: 320px;
     height: 400px;
@@ -497,7 +497,7 @@ a {
 }
 
 /* ==========================================
-   通用 Section 樣式
+   通用 Section 样式
    ========================================== */
 
 .section {
@@ -540,7 +540,7 @@ a {
 }
 
 /* ==========================================
-   基本檔案卡片網格
+   基本档案卡片网格
    ========================================== */
 
 .profile-section {
@@ -613,7 +613,7 @@ a {
 }
 
 /* ==========================================
-   練習生時間線
+   练习生时间线
    ========================================== */
 
 .trainee-section {
@@ -736,7 +736,7 @@ a {
 }
 
 /* ==========================================
-   歌曲 & 電影推薦
+   歌曲 & 电影推荐
    ========================================== */
 
 .recs-section {
@@ -929,7 +929,7 @@ a {
     }
 }
 
-/* 推薦卡片封面變體 */
+/* 推荐卡片封面变体 */
 .rec-cover--music {
     background: linear-gradient(135deg, var(--pink-pale), #fce4ec) !important;
 }
@@ -942,7 +942,7 @@ a {
     font-size: 2rem;
 }
 
-/* 外部資源連結卡片（歌單/片單） */
+/* 外部资源链接卡片（歌单/片单） */
 .resource-link-card {
     background: var(--white);
     border-radius: var(--radius-lg);
@@ -1028,7 +1028,7 @@ a {
 }
 
 /* ==========================================
-   粉絲資源區塊
+   粉丝资源区块
    ========================================== */
 
 .resources-section {
@@ -1120,7 +1120,7 @@ a {
 }
 
 /* ==========================================
-   TMI 趣事網格
+   TMI 趣事网格
    ========================================== */
 
 .tmi-section {
@@ -1168,7 +1168,129 @@ a {
 }
 
 /* ==========================================
-   頁腳
+   Blog 板块
+   ========================================== */
+
+.blog-section {
+    background: var(--warm-white);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    border: 2px solid rgba(0,0,0,0.05);
+    transition: all var(--transition);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--pink), var(--peach), var(--blue));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--pink-light);
+}
+
+.blog-card:hover::before {
+    opacity: 1;
+}
+
+.blog-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.blog-card-icon {
+    font-size: 1.6rem;
+}
+
+.blog-card-platform {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--pink);
+    background: var(--pink-pale);
+    padding: 3px 12px;
+    border-radius: var(--radius-full);
+}
+
+.blog-card-body {
+    flex: 1;
+    margin-bottom: var(--space-md);
+}
+
+.blog-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: var(--space-sm);
+}
+
+.blog-card-desc {
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    line-height: 1.6;
+}
+
+.blog-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.blog-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--ink);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--transition);
+}
+
+.blog-card:hover .blog-card-cta {
+    background: #444;
+    transform: scale(1.03);
+}
+
+@media (max-width: 480px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   页脚
    ========================================== */
 
 .footer {
@@ -1244,7 +1366,7 @@ a {
     color: rgba(255,255,255,0.3);
 }
 
-/* 頁腳跑動像素小狗 */
+/* 页脚跑动像素小狗 */
 .footer-puppy {
     position: absolute;
     bottom: 20px;
@@ -1284,7 +1406,7 @@ a {
 }
 
 /* ==========================================
-   響應式設計
+   响应式设计
    ========================================== */
 
 @media (max-width: 1024px) {

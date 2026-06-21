@@ -1,11 +1,11 @@
 /* ============================================
-   崔旻帝 MINJE 百科全書 — 互動腳本
+   崔旻帝 MINJE 百科全书 — 互动脚本
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
     // ==========================================
-    // 導航欄滾動效果
+    // 导航栏滚动效果
     // ==========================================
     const navbar = document.querySelector('.navbar');
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavbar(); // 初始檢查
 
     // ==========================================
-    // 手機版導航選單切換
+    // 手机版导航菜单切换
     // ==========================================
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('open');
     });
 
-    // 點擊導航鏈接後關閉選單
+    // 点击导航链接后关闭菜单
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('open');
         });
     });
 
-    // 點擊頁面其他區域關閉選單
+    // 点击页面其他区域关闭菜单
     document.addEventListener('click', (e) => {
         if (!navbar.contains(e.target)) {
             navLinks.classList.remove('open');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 歌曲/電影 選項卡切換
+    // 歌曲/电影 选项卡切换
     // ==========================================
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabPanels = document.querySelectorAll('.tab-panel');
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 滾動淡入動畫 (Intersection Observer)
+    // 滚动淡入动画 (Intersection Observer)
     // ==========================================
     const observerOptions = {
         root: null,
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '.profile-card, .tmi-card, .rec-card, .timeline-content'
     );
 
-    // 為所有卡片添加初始狀態
+    // 为所有卡片添加初始状态
     fadeInElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-                // 淡入後不再觀察
+                // 淡入后不再观察
                 observer.unobserve(entry.target);
             }
         });
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeInElements.forEach(el => observer.observe(el));
 
     // ==========================================
-    // 像素小狗互動 — 鼠標靠近時增加透明度
+    // 像素小狗互动 — 鼠标靠近时增加透明度
     // ==========================================
     const pixelPuppies = document.querySelectorAll('.pixel-puppy');
     let mouseX = 0;
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 Math.pow(mouseX - puppyX, 2) + Math.pow(mouseY - puppyY, 2)
             );
 
-            // 鼠標越近越明顯
+            // 鼠标越近越明显
             const maxDistance = 300;
             const opacity = Math.max(0.08, 0.3 - (distance / maxDistance) * 0.22);
             puppy.style.opacity = opacity;
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 平滑捲動到錨點
+    // 平滑滚动到锚点
     // ==========================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -147,11 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 頁腳小狗 — 隨機改變速度
+    // 页脚小狗 — 随机改变速度
     // ==========================================
     const runningPuppy = document.querySelector('.footer-puppy');
     if (runningPuppy) {
-        // 每次動畫結束時隨機調整速度
+        // 每次动画结束时随机调整速度
         runningPuppy.addEventListener('animationiteration', () => {
             const newDuration = 8 + Math.random() * 10; // 8-18 秒
             runningPuppy.style.animationDuration = newDuration + 's';
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(`
     🐾  ￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣  🐾
         최민제 崔旻帝 MINJE
-        歡迎來到旻帝百科全書！
+        欢迎来到旻帝百科全书！
         Made with 💖 for 최민제
     🐾  ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿  🐾
     `);
