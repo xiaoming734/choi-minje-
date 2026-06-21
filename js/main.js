@@ -159,6 +159,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
+    // 照片灯箱
+    // ==========================================
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="放大预览">
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('img');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+    window.openLightbox = function(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+    }
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === lightboxClose) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    // ==========================================
     // Console 彩蛋
     // ==========================================
     console.log(`
